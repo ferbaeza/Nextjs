@@ -4,6 +4,20 @@
 
 @layer components{
   .hola{
-    @apply bg-gray-500 ;
+    @apply bg-gray-500 text-center text-blue-700 text-3xl ;
   }
+  .sec{
+    @apply shadow-xl bg-gray-100  ;
+  }
+  .titulo{
+    @apply bg-gray-200 text-center text-blue-700 text-3xl ;
+  }
+  .body{
+    @apply bg-gray-100 text-center text-gray-700 text-2xl ;
+  }
+  .sec_counter{
+    @apply text-center text-white shadow-xl bg-gray-100 ;
+  }
+
+
 }
