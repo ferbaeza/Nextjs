@@ -10,7 +10,7 @@
     @apply shadow-xl bg-gray-100  ;
   }
   .titulo{
-    @apply bg-gray-200 text-center text-blue-700 text-3xl ;
+    @apply bg-gray-200 text-center text-red-700 text-3xl ;
   }
   .body{
     @apply bg-gray-100 text-center text-gray-700 text-2xl ;
