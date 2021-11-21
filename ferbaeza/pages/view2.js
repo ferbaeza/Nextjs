@@ -12,16 +12,22 @@ export async function getStaticProps() {
 export default function Home({data}) {
     return (
       <>
+        <section className="sec_counter">
+          <a className="back" href="/">Back</a>
+        </section>
+        <div className="mainblog">
+
         <h1 className="hola">Blog Page</h1> 
-        <div>
+        <div className='blog'>
           {data.map((post, i) => {
             return (
-              <div key={i}>
+              <div className="entry" key={i}>
                 <h1 className="titulo">{post.title}</h1>
                 <p className="body">{post.body}</p>
             </div>
             )
           })}
+        </div>
         </div>
       </>
     )

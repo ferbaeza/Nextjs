@@ -4,20 +4,40 @@
 
 @layer components{
   .hola{
-    @apply bg-gray-500 text-center text-blue-700 text-3xl ;
+    @apply text-center text-blue-800 text-7xl pb-9 pt-12;
   }
   .sec{
     @apply shadow-xl bg-gray-100  ;
   }
   .titulo{
-    @apply bg-gray-200 text-center text-red-700 text-3xl ;
+    @apply drop-shadow-md text-center text-blue-500 text-5xl pt-7 pb-7 ;
   }
   .body{
-    @apply bg-gray-100 text-center text-gray-700 text-2xl ;
+    @apply  text-center text-gray-700 text-2xl ;
+  }
+  .entry{
+    @apply p-12 shadow-xl;
   }
   .sec_counter{
-    @apply text-center text-white shadow-xl bg-gray-100 ;
+    @apply text-center text-white shadow-xl ;
   }
-
+  .back{
+    @apply text-center text-3xl text-red-600 ;
+  }
+  .mainblog{
+    @apply w-2/3 m-auto flex-col place-content-center ;
+  }
+  .blog{
+    @apply shadow-2xl ml-2 text-center m-auto ;
+  }
+  .texto{
+    @apply text-center text-red-300 text-2xl  ;
+  }
+  .contador{
+    @apply  flex flex-row items-center justify-center w-full flex-1 px-20 text-center pt-20;
+  }
+  .next{
+    @apply text-center text-blue-800 text-9xl;
+  }
 
 }

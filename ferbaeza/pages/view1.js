@@ -1,12 +1,7 @@
 import React, {useState} from 'react';
 
 function useStatePage() {
-
-
-    // useState return array with value and setter for that value, receives 
-    // an optional argument with initial state.
-    // const [value, setValue] = useState(initialValue);
-    const [count, setCount] = useState(4);
+    const [count, setCount] = useState(5);
 
     // Decrement Count function
     function decrementCount(){
@@ -18,25 +13,35 @@ function useStatePage() {
 
     // Increment Coutn Function
     function incrementCount(){
-         // Not perfect way
-        // setCount(count + 1);
-        // Recomended way
         setCount(prevCount => prevCount + 1);
+        if(count>9){
+            document.getElementById("diez").style.display="block";
+            console.log("Clear");
+        }else if(count<10){
+            document.getElementById("diez").className="hidden";
+        }else{
+            document.getElementById("diez").innerHTML="...";
+        }
     }
 
     return (
         <>
             <section className="sec_counter">
-                <a  className="hola" href="/">Back</a>
-                <h2 className="text-center text-white">Simple Counter</h2>
-                <p className="text-center text-white">Editing by FerBaeza</p>
+                <a  className="back" href="/">Back</a>
+                <h2 className="texto">Simple Counter</h2>
+                <p className="texto">Editing by FerBaeza</p>
     
             </section>
 
-            <div className="flex flex-row items-center justify-center w-full flex-1 px-20 text-center pt-20">
+            <div className="contador">
                 <button className="btn text-2xl" onClick={decrementCount}>-</button>
                 <span className="text-2xl mx-4">{count}</span>
                 <button className="btn text-2xl" onClick={incrementCount}>+</button>
+            </div>
+            <div id="diez" className="hidden">
+            <div className="contador">
+                <span className="text-8xl mx-4">Diez</span>
+            </div>
             </div>
         </>
     )
