@@ -9,7 +9,7 @@ function createUser() {
     const email = state.email;
 
     function setmail(){
-        setState(prevState=> name.email)
+        setState(prevState=> state.email)
     }
 
     /*
