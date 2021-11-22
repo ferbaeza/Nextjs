@@ -30,18 +30,27 @@ export default function Home() {
             href="/view2"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
+            <h2>Examples simple Api &rarr;</h2>
             <p>Discover an api</p>
           </a>
 
           <a 
-          href="/"
+          href="/newapi"
           className={styles.card}>
-            <h2>Deploy &rarr;</h2>
+            <h2>Example Api2 &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Second
             </p>
           </a>
+          <a 
+          href="/view3"
+          className={styles.card}>
+            <h2>Example Api3 &rarr;</h2>
+            <p>
+              Third
+            </p>
+          </a>
+
         </div>
       </main>
 
