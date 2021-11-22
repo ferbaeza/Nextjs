@@ -39,5 +39,11 @@
   .next{
     @apply text-center text-blue-800 text-9xl;
   }
+  .data{
+    @apply m-auto bg-red-300 w-auto ml-5 text-center text-2xl text-white pl-7 placeholder-red-700 ;
+  }
+  .btn{
+    @apply w-auto m-auto text-red-600 text-2xl ml-6 ;
+  }
 
 }

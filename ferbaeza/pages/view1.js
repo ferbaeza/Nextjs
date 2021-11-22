@@ -14,10 +14,10 @@ function useStatePage() {
     // Increment Coutn Function
     function incrementCount(){
         setCount(prevCount => prevCount + 1);
-        if(count>9){
+        if(count>8){
             document.getElementById("diez").style.display="block";
             console.log("Clear");
-        }else if(count<10){
+        }else if(count<11){
             document.getElementById("diez").className="hidden";
         }else{
             document.getElementById("diez").innerHTML="...";
@@ -33,7 +33,7 @@ function useStatePage() {
     
             </section>
 
-            <div className="contador">
+            <div className="w-auto m-auto text-center text-3xl">
                 <button className="btn text-2xl" onClick={decrementCount}>-</button>
                 <span className="text-2xl mx-4">{count}</span>
                 <button className="btn text-2xl" onClick={incrementCount}>+</button>

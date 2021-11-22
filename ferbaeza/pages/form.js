@@ -1,60 +1,35 @@
 import React, {useState} from 'react';
 
-function useStatePage() {
-    /*const [state, setState] = useState({
-        count: 4,
-        color: "blue"
-    });
-
-    const count = state.count;
-    const color = state.color;
-
-
-                    <button className="text-3xl rounded-2xl w-auto " onClick={decrementCount}>-</button>
-                <span className="text-2xl mx-4">{count}</span>
-                <span className="text-2xl mx-4">{color}</span>
-                <button className="text-3xl rounded-2xl w-auto" onClick={incrementCount}>+</button>
-
-
-
-
-    */
+function createUser() {
     const [state, setState] = useState({
-        name: "",
-        email: ""
+        name: "Fer",
+        email: "fbaeza@gmail.com"
     });
     const name = state.name;
     const email = state.email;
 
-
-
-
-
-
-
-    // Decrement Count function
-    function decrementCount(){
-        setState(prevState => {
-            return {...prevState, name : prevState.name}
-        });
+    function setmail(){
+        setState(prevState=> name.email)
     }
 
-    // Increment Coutn Function
-    function incrementCount(){
+    /*
+    function setmail(){
         setState(prevState => {
             return {...prevState, email : prevState.email}
         });
     }
-
+    */
     return (
         <>
-            <div className="text-center text-3xl text-red-600"><a href="/">Back</a></div>
-            <div className="flex flex-row items-center justify-center shadow-2xl w-full flex-1 px-20 text-center pt-20">
+            <div className="back"><a href="/">Back</a></div>
+            <div className="contador">
             </div>
             <div>
                 <form className="w-auto m-auto text-center placeholder-red-700 mt-20">
-                    <input type='text' placeholder="name"></input>
-                    <input type='text' placeholder="name"></input>
+                    <input className="data" type='text' placeholder="name"></input>
+                    <input name={state.email} className="data" type='text' placeholder="email"></input>
+                    <button onSubmit={setmail} className="btn" type='submit' placeholder="send">Send</button>
+
 
                 </form>
                 <div className="flex flex-row items-center justify-center shadow-2xl w-full flex-1 px-20 text-center pt-20">
@@ -67,4 +42,4 @@ function useStatePage() {
     )
 }
 
-export default useStatePage;
+export default createUser;
