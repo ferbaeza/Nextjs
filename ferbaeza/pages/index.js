@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -16,45 +17,54 @@ export default function Home() {
 
 
         <div className={styles.grid}>
-          <a href="/view1" className={styles.card}>
+          <Link href="/view1">
+          <a  className={styles.card}>
             <h2>Count &rarr;</h2>
             <p>Simple counter</p>
           </a>
-
-          <a href="/form" className={styles.card}>
+          </Link>
+          <Link href="/form">
+          <a  className={styles.card}>
             <h2>Form &rarr;</h2>
             <p>Lets gonna fill a form!</p>
           </a>
-
+          </Link>
+          <Link href="/view2">
           <a
-            href="/view2"
+            
             className={styles.card}
           >
             <h2>Examples simple Api &rarr;</h2>
             <p>Discover an api</p>
           </a>
-
+          </Link>
+          <Link href="/newapi">
           <a 
-          href="/newapi"
+          
           className={styles.card}>
             <h2>Example Api2 &rarr;</h2>
             <p>
               Second
             </p>
           </a>
+          </Link>
+          <Link href="/view3">
           <a 
-          href="/view3"
+          
           className={styles.card}>
             <h2>Example Api3 &rarr;</h2>
             <p>
               Third
             </p>
           </a>
-
+          </Link>
         </div>
       </main>
 
       <footer className={styles.footer}>
+        <Link href="/memo">
+          <a>Memo</a>
+        </Link>
       </footer>
     </div>
   )

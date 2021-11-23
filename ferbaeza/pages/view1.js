@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import Link from 'next/link'
+
 
 function useStatePage() {
     const [count, setCount] = useState(5);
@@ -14,11 +16,9 @@ function useStatePage() {
     // Increment Coutn Function
     function incrementCount(){
         setCount(prevCount => prevCount + 1);
-        if(count>8){
+        if(count===9){
             document.getElementById("diez").style.display="block";
             console.log("Clear");
-        }else if(count<11){
-            document.getElementById("diez").className="hidden";
         }else{
             document.getElementById("diez").innerHTML="...";
         }
@@ -26,6 +26,12 @@ function useStatePage() {
 
     return (
         <>
+            <div className="back">
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
+
+            </div>
             <section className="sec_counter">
                 <a  className="back" href="/">Back</a>
                 <h2 className="texto">Simple Counter</h2>

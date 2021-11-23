@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Link from 'next/link';
 
 function createUser() {
     const [state, setState] = useState({
@@ -8,24 +9,26 @@ function createUser() {
     const name = state.name;
     const email = state.email;
 
-    function setmail(){
-        setState(prevState=> state.email)
-    }
 
-    /*
     function setmail(){
         setState(prevState => {
             return {...prevState, email : prevState.email}
         });
+        console.log(email)
     }
-    */
     return (
         <>
-            <div className="back"><a href="/">Back</a></div>
+            <div className="back">
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
+
+            </div>
+
             <div className="contador">
             </div>
             <div>
-                <form className="w-auto m-auto text-center placeholder-red-700 mt-20">
+                <form className="w-auto m-auto text-center  mt-20">
                     <input className="data" type='text' placeholder="name"></input>
                     <input name={state.email} className="data" type='text' placeholder="email"></input>
                     <button onSubmit={setmail} className="btn" type='submit' placeholder="send">Send</button>

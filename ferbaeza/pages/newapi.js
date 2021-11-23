@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import Link from 'next/link'
 
 export default function showPage(){
     const [resourceType, setResourceType] = useState('character');
@@ -11,7 +12,12 @@ export default function showPage(){
 
     return (
         <>
-            <div className="back"><a href="/">Back</a></div>
+            <div className="back">
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
+
+            </div>
 
             <div className="">
                 <button

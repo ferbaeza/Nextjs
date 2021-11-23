@@ -1,3 +1,6 @@
+import Link from 'next/link'
+
+
 export async function getStaticProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
   const data = await res.json()
@@ -8,12 +11,17 @@ export async function getStaticProps() {
   }
 }    
 
-
 export default function Home({data}) {
     return (
       <>
-        <section className="sec_counter">
-          <a className="back" href="/">Back</a>
+            <div className="back">
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
+
+            </div>
+          <section className="sec_counter">
+
         </section>
         <div className="mainblog">
 
