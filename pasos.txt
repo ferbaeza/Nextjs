@@ -1,1 +1,16 @@
-Hello
+
+yarn create next-app
+
+
+
+yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
+yarn install
+yarn tailwindcss init -p
+
+En __ tailwind.config.js __ hay que sustituir esta linea
+
+purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+
+
+
+#https://futuramaapi.herokuapp.com/
