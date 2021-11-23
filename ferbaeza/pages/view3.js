@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
-import Link from'next/link'
+import Link from'next/link';
+import Head from 'next/head';
 
 export default function showPage(){
     const [resourceType, setResourceType] = useState('bender');
@@ -12,6 +13,10 @@ export default function showPage(){
 
     return (
         <>
+            <Head>
+                <title>Vista dos</title>
+            </Head>
+
             <div className="back">
                 <Link href="/">
                     <a>Home</a>
@@ -51,13 +56,16 @@ export default function showPage(){
 
 
             </div>
+            <div className=" grid grid-cols-3">
                 {items.map((item, index) => {
-                    return (<div key={index} className=" w-auto m-auto text-xl pb-2 mb-2 ml-14">
-                        <p className=" text-opacity-60 text-3xl">{JSON.stringify(item.character)}</p>
-                        <p>{JSON.stringify(item.quote)}</p>
-                        <img className=" w-36 h-22" src={JSON.stringify(item.image)}/>
+                    return (
+                    <div key={index} className=" w-auto m-auto text-xl pb-2 mb-2 ml-14">
+                        <p className=" text-center text-3xl">{item.character}</p>
+                        <p>{item.quote}</p>
+                        <img className=" w-36 h-22" src={item.image}/>
                     </div>)
-                })}
+                })}            
+            </div>
 
         </>
 

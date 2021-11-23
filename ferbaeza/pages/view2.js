@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import Head from 'next/head';
 
 
 export async function getStaticProps() {
@@ -14,6 +15,10 @@ export async function getStaticProps() {
 export default function Home({data}) {
     return (
       <>
+            <Head>
+                <title>Vista dos</title>
+            </Head>
+
             <div className="back">
                 <Link href="/">
                     <a>Home</a>

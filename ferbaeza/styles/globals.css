@@ -40,10 +40,10 @@
     @apply text-center text-blue-800 text-9xl;
   }
   .data{
-    @apply m-auto bg-blue-300 w-auto ml-5 text-center text-2xl text-white pl-7 placeholder-blue-700 ;
+    @apply m-auto mb-12 bg-blue-300 w-auto ml-5 text-center text-2xl text-white pl-7 placeholder-blue-700 ;
   }
   .btn{
-    @apply w-auto m-auto bg-blue-100 text-blue-900 text-3xl ml-6 ;
+    @apply w-auto m-auto bg-blue-100 text-blue-900 text-4xl ml-6 text-center rounded-t-3xl ;
   }
 
 }
