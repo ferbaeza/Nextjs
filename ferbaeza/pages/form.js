@@ -7,10 +7,12 @@ function createUser() {
     const [name, setName] = useState('');
 
 
-    function data(){
-        setState(ol => [...ol ,' '+ name]);
+    function data(event){
         
+        setState(ol => [...ol ,' '+ name]);
+        event.preventDefault()
     }
+
 
     return (
         <>
@@ -29,10 +31,11 @@ function createUser() {
             <div>
                 <form className="w-auto m-auto text-center  mt-20">
                     <input onChange={(e)=>setName(e.target.value)}  className="data" type='text' placeholder="name"></input>
+                    <button onClick={data}  className="btn" type='submit' placeholder="send">Send</button>
+
                 </form>
                 <div className="btn2">
-                <button onClick={data}  className="btn" type='submit' placeholder="send">Send</button></div>
-
+                </div>
                 <div className="flex flex-row items-center justify-center shadow-2xl w-full flex-1 px-20 text-center pt-20">
                 <span className="text-2xl mx-4">{state}</span>
 

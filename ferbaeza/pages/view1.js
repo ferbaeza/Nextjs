@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -6,25 +6,31 @@ import Head from 'next/head';
 
 function useStatePage() {
     const [count, setCount] = useState(5);
-
-    // Decrement Count function
     function decrementCount(){
-        // Not perfect way
-        // setCount(count - 1);
-        // Recomended way
         setCount(prevCount => prevCount - 1);
     }
-
-    // Increment Coutn Function
     function incrementCount(){
         setCount(prevCount => prevCount + 1);
         if(count===9){
-            document.getElementById("diez").style.display="block";
+            document.getElementById("diez").innerHTML="<span className='text-8xl mx-4'>Diez</span>";
             console.log("Clear");
         }else{
             document.getElementById("diez").innerHTML="...";
         }
     }
+    const handleScroll = () => {}
+        useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    });
+    useEffect(() => {
+        document.body.addEventListener('keydown', onKeyDown);
+      }, []);
+      
+      function onKeyDown(event) {
+        console.log(event);
+        document.getElementById('listener').innerHTML=event['code'];
+      }
 
     return (
         <>
@@ -33,7 +39,7 @@ function useStatePage() {
             </Head>
 
 
-            <div className="back">
+            <div onMouseOver={handleScroll} className="back">
                 <Link href="/">
                     <a>Home</a>
                 </Link>
@@ -50,13 +56,15 @@ function useStatePage() {
                 <span className="text-2xl mx-4">{count}</span>
                 <button className="rounded-3xl w-12 bg-blue-600 text-center text-white btn text-2xl" onClick={incrementCount}>+</button>
             </div>
-            <div id="diez" className="hidden">
-            <div className="contador">
-                <span className="text-8xl mx-4">Diez</span>
+            <div className="titulo" id="diez">
             </div>
+            <div className='titulo'>
+                <h1>Press any key</h1>
+                <h1 id="listener" className="mt-16 bg-yellow-300"></h1>
             </div>
         </>
     )
 }
 
 export default useStatePage;
+

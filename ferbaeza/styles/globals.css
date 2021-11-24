@@ -43,7 +43,7 @@
     @apply m-auto mb-12 bg-blue-300 w-auto ml-5 text-center text-2xl text-white pl-7 placeholder-blue-700 ;
   }
   .btn{
-    @apply w-auto m-auto bg-blue-100 text-blue-900 text-4xl ml-6 text-center rounded-t-3xl ;
+    @apply w-auto m-auto bg-blue-100 text-blue-900 text-4xl ml-6 text-center rounded-3xl ;
   }
   .btn2{
     @apply w-24 m-auto bg-blue-100 text-blue-900 text-4xl ml-6 text-center rounded-t-3xl ;

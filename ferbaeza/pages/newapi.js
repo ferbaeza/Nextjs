@@ -11,6 +11,11 @@ export default function showPage(){
             .then(json => setItems(json))
     }, [resourceType]);
 
+    for (let i=1; i<=10; i++){
+        //const div = document.getElementById('nav').innerHTML='<button className="btn text-2xl"onClick={() => setResourceType('+i+')}>'+i+'</button>';
+        //console.log(i);
+    }
+
     return (
         <>
             <Head>
@@ -23,8 +28,8 @@ export default function showPage(){
                 </Link>
 
             </div>
-
-            <div className="">
+            
+            <div className="" id="nav">
                 <button
                     className="btn text-2xl"
                     onClick={() => setResourceType('1')}>
