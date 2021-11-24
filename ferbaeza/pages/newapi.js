@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Head from "next/head";
 
 export default function showPage(){
-    const [resourceType, setResourceType] = useState('posts');
+    const [resourceType, setResourceType] = useState('1');
     const [items, setItems]= useState([]);
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
+        fetch(`https://jsonplaceholder.typicode.com/posts?userId=${resourceType}`)
             .then(response => response.json())
             .then(json => setItems(json))
     }, [resourceType]);
@@ -27,17 +27,17 @@ export default function showPage(){
             <div className="">
                 <button
                     className="btn text-2xl"
-                    onClick={() => setResourceType('')}>
+                    onClick={() => setResourceType('1')}>
                     1
                 </button>
                 <button
                     className="btn text-2xl"
-                    onClick={() => setResourceType('')}>
+                    onClick={() => setResourceType('2')}>
                     2
                 </button>
                 <button
                     className="btn text-2xl"
-                    onClick={() => setResourceType('')}>
+                    onClick={() => setResourceType('3')}>
                     3
                 </button>
             </div>
