@@ -23,24 +23,31 @@ export default function Home() {
             <p>Simple counter</p>
           </a>
           </Link>
+
+          <Link href="/dina">
+          <a  className={styles.card}>
+            <h2>Event Listener &rarr;</h2>
+            <p>Dinamic source</p>
+          </a>
+          </Link>
+
+
           <Link href="/form">
           <a  className={styles.card}>
             <h2>Form &rarr;</h2>
             <p>Lets gonna fill a form!</p>
           </a>
           </Link>
+          
           <Link href="/view2">
-          <a
-            
-            className={styles.card}
-          >
+          <a className={styles.card}>
             <h2>Examples simple Api &rarr;</h2>
             <p>Discover an api</p>
           </a>
           </Link>
+          
           <Link href="/newapi">
           <a 
-          
           className={styles.card}>
             <h2>Example Api2 &rarr;</h2>
             <p>
@@ -48,9 +55,9 @@ export default function Home() {
             </p>
           </a>
           </Link>
+          
           <Link href="/view3">
           <a 
-          
           className={styles.card}>
             <h2>Example Api3 &rarr;</h2>
             <p>
