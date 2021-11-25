@@ -65,6 +65,18 @@ export default function Home() {
             </p>
           </a>
           </Link>
+
+          <Link href="/atlas">
+          <a 
+          className={styles.card}>
+            <h2>Atlas &rarr;</h2>
+            <p>
+              dbConnect
+            </p>
+          </a>
+          </Link>
+
+
         </div>
       </main>
 
