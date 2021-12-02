@@ -41,7 +41,7 @@ export default function Home() {
           
           <Link href="/view2">
           <a className={styles.card}>
-            <h2>Examples simple Api &rarr;</h2>
+            <h2>Examples Api1 &rarr;</h2>
             <p>Discover an api</p>
           </a>
           </Link>
@@ -66,6 +66,26 @@ export default function Home() {
           </a>
           </Link>
 
+          <Link href="/ref">
+          <a 
+          className={styles.card}>
+            <h2>Ref &rarr;</h2>
+            <p>
+              ref Hook
+            </p>
+          </a>
+          </Link>
+
+          <Link href="/memoView">
+          <a 
+          className={styles.card}>
+            <h2>Memo &rarr;</h2>
+            <p>
+              memo Hook
+            </p>
+          </a>
+          </Link>
+
           <Link href="/atlas">
           <a 
           className={styles.card}>
@@ -81,8 +101,8 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <Link href="/memo">
-          <a>Memo</a>
+        <Link href="/">
+          <a>FerBaeza Nextjs</a>
         </Link>
       </footer>
     </div>

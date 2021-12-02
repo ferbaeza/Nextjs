@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import useScrollPosition from "./utils/scroll";
 import Link from'next/link';
 import Head from 'next/head';
 
 
-const Key = dynamic(() => import('./utils/key'), {
-    ssr: false,
-  });
 
-export default function listener() {    
-
+const scrollPosition = useScrollPosition();
+console.log(scrollPosition); 
+/*
+export default function backHome() {   
     return (
       <>
       <Head>
@@ -22,10 +20,9 @@ export default function listener() {
                 </Link>
 
             </div>
-      
-       <Key/>
+
        </>
     ) 
 }
 
-
+*/
