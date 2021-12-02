@@ -14,7 +14,7 @@ const App = () => {
 return(
     <>
             <Head>
-                <title>Vista dos</title>
+                <title>Memo Hook</title>
             </Head>
 
             <div className="back">

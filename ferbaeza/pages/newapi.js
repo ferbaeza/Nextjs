@@ -19,7 +19,7 @@ export default function showPage(){
     return (
         <>
             <Head>
-                <title>Api</title>
+                <title>Api_2</title>
             </Head>
 
             <div className="back">

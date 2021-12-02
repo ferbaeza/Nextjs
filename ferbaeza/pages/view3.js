@@ -14,7 +14,7 @@ export default function showPage(){
     return (
         <>
             <Head>
-                <title>Vista dos</title>
+                <title>Api_3</title>
             </Head>
 
             <div className="back">

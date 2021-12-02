@@ -16,7 +16,7 @@ export default function Home({data}) {
     return (
       <>
             <Head>
-                <title>Vista dos</title>
+                <title>Api_1</title>
             </Head>
 
             <div className="back">

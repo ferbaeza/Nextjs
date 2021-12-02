@@ -12,7 +12,7 @@ export default function listener() {
 
     return (
       <>
-      <Head>
+            <Head>
                 <title>Vista dos</title>
             </Head>
 

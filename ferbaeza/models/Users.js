@@ -14,7 +14,13 @@ const UsersVista = new mongoose.Schema({
         require: [true, "Porfavor introduzca el email"]
     },
 })
-export default mongoose.models.firstApp || mongoose.model("firstApp", UsersVista)
+export default mongoose.model("Users", UsersVista)
+
+//mongoose.models.Users || 
+
+
+
+
 
 //despues de default declaramos un condicional
 // al poner el || indicamos si no existe algun models.User
