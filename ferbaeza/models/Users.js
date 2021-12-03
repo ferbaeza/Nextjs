@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const UsersVista = new mongoose.Schema({
+const UsersVistaSchema = new mongoose.Schema({
     name:{
         type: String,
         require: [true, "Porfavor introduzca el nombbre"]
@@ -14,7 +14,7 @@ const UsersVista = new mongoose.Schema({
         require: [true, "Porfavor introduzca el email"]
     },
 })
-export default mongoose.model("Users", UsersVista)
+export default mongoose.model("Users", UsersVistaSchema)
 
 //mongoose.models.Users || 
 

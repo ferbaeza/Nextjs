@@ -1,5 +1,5 @@
-import dbConnect from '../lib/dbConnect' 
-import Users from '../models/Users'
+import dbConnect from '../../lib/dbConnect' 
+import Users from '../../models/Users'
 
 
 
