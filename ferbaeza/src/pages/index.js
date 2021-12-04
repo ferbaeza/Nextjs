@@ -86,7 +86,7 @@ export default function Home() {
           </a>
           </Link>
 
-          <Link href="/atlas">
+          <Link href="/atlasViews">
           <a 
           className={styles.card}>
             <h2>Atlas &rarr;</h2>
