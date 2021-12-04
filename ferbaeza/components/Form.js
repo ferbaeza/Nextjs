@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 //import { mutate } from 'swr'
+import Head from 'next/head'
+import Link from 'next/link'
+
 
 const Form = ({ formId, userForm, forNewUser = true }) => {
   const router = useRouter()
@@ -98,9 +101,28 @@ const Form = ({ formId, userForm, forNewUser = true }) => {
 
   return (
     <>
-      <form id={formId} onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+        <Head>
+          <title>Atlas</title>
+        </Head>
+        <div className="back">
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </div>
+        <div className="back">
+          <Link href="/atlasViews">
+            <a className="
+            text-2xl text-gray-600 bg-gray-400 rounded-l rounded-r pl-2 pr-2">Back</a>
+          </Link>
+      </div> 
+
+      <form id={formId} onSubmit={handleSubmit} className="text-center flex flex-col w-40 m-auto mt-32">
+        <label
+          className="w-auto text-center text-2xl text-indigo-500 rounded-l rounded-r mt-4"
+          htmlFor="name">Name</label>
         <input
+          className="w-auto text-white placeholder-white text-center bg-gray-400 rounded-l rounded-r mt-4"
+          placeholder="Introduzca el nombre"
           type="text"
           maxLength="20"
           name="name"
@@ -109,8 +131,12 @@ const Form = ({ formId, userForm, forNewUser = true }) => {
           required
         />
 
-        <label htmlFor="surname">Surname</label>
+        <label
+        className="w-auto text-center text-2xl text-indigo-500 rounded-l rounded-r mt-4"
+        htmlFor="surname">Surname</label>
         <input
+          className="w-auto text-white placeholder-white text-center bg-gray-400 rounded-l rounded-r mt-4"
+          placeholder="Introduzca el apellido"
           type="text"
           maxLength="20"
           name="surname"
@@ -119,8 +145,12 @@ const Form = ({ formId, userForm, forNewUser = true }) => {
           required
         />
 
-        <label htmlFor="mail">Mail</label>
+        <label
+        className="w-auto text-center text-2xl text-indigo-500 rounded-l rounded-r mt-4"
+        htmlFor="mail">Mail</label>
         <input
+          className="w-auto text-white placeholder-white text-center bg-gray-400 rounded-l rounded-r mt-4"
+          placeholder="Introduzca el mail"
           type="text"
           maxLength="30"
           name="mail"
@@ -128,7 +158,8 @@ const Form = ({ formId, userForm, forNewUser = true }) => {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="btn">
+        <button type="submit" className="
+        text-center text-3xl text-white rounded-l rounded-r bg-indigo-600 mt-9">
           Submit
         </button>
       </form>
