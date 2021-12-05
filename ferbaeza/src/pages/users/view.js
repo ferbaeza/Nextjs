@@ -12,7 +12,7 @@ const UserPage = ({ user }) => {
     const userID = router.query.id
 
     try {
-      await fetch(`/api/users/${userID}`, {
+      await fetch(`../api/users/${userID}`, {
         method: 'Delete',
       })
       router.push('/')
@@ -27,8 +27,8 @@ const UserPage = ({ user }) => {
         <img src={user.name} />
         <h5 className="user-name">{user.name}</h5>
         <div className="main-content">
-          <p className="user-name">{user.surname}</p>
-          <p className="owner">Owner: {user.mail}</p>
+          <p className="user-name">Apellido: {user.surname}</p>
+          <p className="owner">Mail: {user.mail}</p>
 
           {/* Extra user Info: Likes and Dislikes */}
 

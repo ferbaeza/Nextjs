@@ -1,4 +1,4 @@
-import Form from '../../components/Form'
+import Form from '../../../components/Form'
 
 const NewUser = () => {
   const userForm = {
@@ -7,7 +7,7 @@ const NewUser = () => {
     mail: '',
   }
 
-  return <Form formId="add-pet-form" userForm={userForm} />
+  return <Form formId="add-user-form" userForm={userForm} />
 }
 
 export default NewUser

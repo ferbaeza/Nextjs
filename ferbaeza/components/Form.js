@@ -62,7 +62,7 @@ const Form = ({ formId, userForm, forNewUser = true }) => {
         throw new Error(res.status)
       }
 
-      router.push('/atlasViews')
+      router.push('/users/atlasViews')
     } catch (error) {
       setMessage('Failed to add user')
     }
@@ -110,7 +110,7 @@ const Form = ({ formId, userForm, forNewUser = true }) => {
           </Link>
         </div>
         <div className="back">
-          <Link href="/atlasViews">
+          <Link href="/users/atlasViews">
             <a className="
             text-2xl text-gray-600 bg-gray-400 rounded-l rounded-r pl-2 pr-2">Back</a>
           </Link>

@@ -23,9 +23,11 @@ export default function MyButton() {
             </div>
 
             <div className=
-                "mt-12 w-auto m-auto text-3xl">
+                "mt-12 w-auto m-auto text-3xl text-center">
                 <CustomText ref={text}/>
-                <input type="button" value="focus" onClick={focustext}/>
+                <input className="
+                bg-yellow-300 rounded-l rounded-r text-2xl text-white" 
+                type="button" value="PUSH" onClick={focustext}/>
             
             </div>
         </>
@@ -34,7 +36,9 @@ export default function MyButton() {
 
 const CustomText = React.forwardRef((props, ref)=>{
     return(
-        <input type="text" ref={ref}/>
+        <input className=
+        "" 
+        type="text" ref={ref}/>
     )
 })
 

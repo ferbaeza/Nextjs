@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Index from 'atlasView'
+import Index from './users/atlasViews'
 
 function MyApp({ Component, pageProps }) {
   return (
